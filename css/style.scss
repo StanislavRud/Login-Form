@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background: url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login_form {
+    width: calc(100% - 20px);
+    max-width: 500px;
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 5px;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 48px 0;
+      font-size: 36px;
+      color: black;
+    }
+
+    .text_username, .text_password {
+      margin-bottom: 12px;
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 70px;
+        border: none;
+        background-color: #ededed;
+        border-radius: 5px;
+        color: #333;
+        font-size: 18px;
+        font-width: 700;
+        padding: 14px 60px 0 10px;
+
+      }
+      input:focus ~ .placeholder,
+      input:valid ~ .placeholder{
+        left: 10px;
+        top: -16px;
+      }
+
+      .placeholder {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        line-height: 70px;
+        top: 0;
+        left: 20px;
+        color: #9d9d9d;
+        user-select: none;
+        pointer-events: none;
+      }
+      .show-password {
+        position: absolute;
+        right: 20px;
+        line-height: 70px;
+        color: #9d9d9d;
+        font-size: 22px;
+        cursor: pointer;
+
+      }
+    }
+    .checkbox {
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+      margin: 20px 0;
+      input {
+        width: 24px;
+        height: 24px;
+        -webkit-appearance: none;
+        background-color: #ededed;
+        border-radius: 5px;
+        margin-right: 10px;
+        cursor: pointer;
+        outline: none;
+      }
+
+      input:checked {
+        background-color: #007b18;
+
+
+        & + .fa-check {
+          opacity: 1;
+        }
+      }
+
+      .fa-check {
+        position: absolute;
+        color: #fff;
+        font-size: 14px;
+        width: 24px;
+        text-align: center;
+        user-select: none;
+        pointer-events: none;
+        opacity: 0;
+      }
+    }
+    .btn {
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 40px auto;
+      background-color: #007b18;
+      color: #fff;
+      font-size: 40px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s linear;
+      outline: none;
+      &:hover {
+        opacity: .85;
+      }
+      &:disabled {
+        background-color: transparent;
+        color: #f93737;
+        border: 2px solid;
+      }
+    }
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      color: #555;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 8px;
+      transition: .2s linear;
+      &:hover {
+        color: #111;
+
+      }
+
+    }
+  }
+}
+
+
+
